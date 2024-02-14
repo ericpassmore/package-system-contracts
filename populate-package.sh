@@ -21,7 +21,7 @@ if [ -n "$TAG" ]; then
   DIR="$PACKAGE_DIR"/"$NAME"-"$VERSION"-"$TAG"
 fi
 
-mkdir $DIR
+mkdir -p $DIR
 
 CONTRACTS=$(find * \( -path "*CMake*" -o -path "*ricardian" -o -path "*test*" \) -prune -o -type d -print)
 for c in $CONTRACTS; do
